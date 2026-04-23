@@ -32,7 +32,7 @@ class ReverseQueueTests {
 		
 		Collections.reverse(arr);
 		Queue<Integer> qr = ReverseQueue.reverse(q);
-		assertEquals(arr.isEmpty(), qr.isEmpty(), "isEmpty() does not match");
+		assertFalse(qr.isEmpty(), "returned queue should not be empty");
 		while (!qr.isEmpty()) {
 			assertEquals(arr.remove(0),qr.dequeue(),"elements don't match");
 		}
